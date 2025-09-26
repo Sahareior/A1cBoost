@@ -13,7 +13,7 @@ const sectionData = [
     image: "/kid-his-father-doing-sport-home-1.png",
     imageAlt: "Kid his father doing",
     imagePosition: "right",
-    imageClasses: "w-[485px] h-[325px]",
+    imageClasses: "w-full max-w-[400px] md:w-[485px] h-[250px] md:h-[325px] object-cover",
   },
   {
     id: "adults",
@@ -26,7 +26,7 @@ const sectionData = [
     imageAlt: "Kid his father doing",
     imagePosition: "left",
     imageClasses:
-      "w-[485px] h-[325px] rounded-[15px] border-2 border-solid border-[#ffffff99] object-cover",
+      "w-full max-w-[400px] md:w-[485px] h-[250px] md:h-[325px] rounded-[15px] border-2 border-solid border-[#ffffff99] object-cover",
   },
   {
     id: "healthcare",
@@ -39,71 +39,72 @@ const sectionData = [
     imageAlt: "Kid his father doing",
     imagePosition: "right",
     imageClasses:
-      "rounded-[15px] border-2 border-solid border-[#ffffff99] object-cover w-[485px] h-[325px]",
+      "rounded-[15px] border-2 border-solid border-[#ffffff99] object-cover w-full max-w-[400px] md:w-[485px] h-[250px] md:h-[325px]",
   },
 ];
 
 export const CallToActionSection = (): JSX.Element => {
   return (
-    <section className="w-full bg-[#00947c1c] shadow-[0px_2px_20px_#00000040] py-[150px]">
-      <div className="max-w-[1201px] mx-auto px-4">
+    <section id="how-it-works" className="w-full bg-[#00947c1c] shadow-[0px_2px_20px_#00000040] py-16 md:py-[150px]">
+      <div className="max-w-[1201px] mx-auto px-4 md:px-6 lg:px-4">
         {sectionData.map((section, index) => (
-          <div key={section.id} className="mb-[63px] last:mb-0">
+          <div key={section.id} className="mb-12 md:mb-[63px] last:mb-0">
             <Card className="border-none shadow-none bg-transparent">
               <CardContent className="p-0">
                 <div
-                  className={`flex items-center justify-center gap-[30px] ${section.imagePosition === "left" ? "gap-[84px]" : ""} ${section.id === "healthcare" ? "gap-[54px]" : ""}`}
+                  className={`flex flex-col ${
+                    section.imagePosition === "left" ? "lg:flex-row" : "lg:flex-row-reverse"
+                  } items-center justify-center gap-6 md:gap-[30px] ${
+                    section.imagePosition === "left" ? "lg:gap-[84px]" : ""
+                  } ${section.id === "healthcare" ? "lg:gap-[54px]" : ""}`}
                 >
-                  {section.imagePosition === "left" && (
+                  {/* Image - always shown above on mobile */}
+                  <div className="flex justify-center w-full lg:w-auto">
                     <img
                       className={section.imageClasses}
                       alt={section.imageAlt}
                       src={section.image}
                     />
-                  )}
+                  </div>
 
+                  {/* Content */}
                   <div
-                    className={`flex flex-col items-start gap-[9px] ${section.id === "families" ? "w-[690px]" : "w-[666px]"}`}
+                    className={`flex flex-col items-start gap-3 md:gap-[9px] w-full lg:${
+                      section.id === "families" ? "w-[690px]" : "w-[666px]"
+                    } text-center lg:text-left`}
                   >
-                    <h2 className="mt-[-1.00px] [font-family:'Poppins',Helvetica] font-normal text-[#333333] text-[32px] tracking-[0] leading-[normal]">
+                    <h2 className="[font-family:'Poppins',Helvetica] font-normal text-[#333333] text-2xl md:text-3xl lg:text-[32px] tracking-[0] leading-[1.2]">
                       {section.title}
                     </h2>
 
                     <h3
-                      className={`[font-family:'Poppins',Helvetica] font-semibold text-4xl tracking-[0] leading-[normal] ${section.subtitleColor}`}
+                      className={`[font-family:'Poppins',Helvetica] font-semibold text-2xl md:text-3xl lg:text-4xl tracking-[0] leading-[1.2] ${section.subtitleColor}`}
                     >
                       {section.subtitle}
                     </h3>
 
                     <p
-                      className={`[font-family:'Poppins',Helvetica] font-normal text-black text-xl tracking-[0] leading-[normal] ${section.id === "adults" ? "w-[642px]" : ""}`}
+                      className={`[font-family:'Poppins',Helvetica] font-normal text-black text-base md:text-lg lg:text-xl tracking-[0] leading-[1.5] md:leading-[1.6] w-full ${
+                        section.id === "adults" ? "lg:w-[642px]" : ""
+                      }`}
                     >
                       {section.description}
                     </p>
                   </div>
-
-                  {section.imagePosition === "right" && (
-                    <img
-                      className={section.imageClasses}
-                      alt={section.imageAlt}
-                      src={section.image}
-                    />
-                  )}
                 </div>
-
               </CardContent>
             </Card>
 
             {index < sectionData.length - 1 && (
-              <div className="mt-[75px]">
-<Separator
-  style={{
-    backgroundImage: `linear-gradient(90deg, #D6EBF9 8.65%, #008AE2 52.88%, #00B5CA 72.36%, #FECB2C 82.09%, #D6EBF9 91.83%)`,
-    height: "2px",
-    border: "none", // remove default border if any
-  }}
-  className="w-full"
-/>
+              <div className="mt-8 md:mt-[75px] px-4 lg:px-0">
+                <Separator
+                  style={{
+                    backgroundImage: `linear-gradient(90deg, #D6EBF9 8.65%, #008AE2 52.88%, #00B5CA 72.36%, #FECB2C 82.09%, #D6EBF9 91.83%)`,
+                    height: "2px",
+                    border: "none",
+                  }}
+                  className="w-full"
+                />
               </div>
             )}
           </div>

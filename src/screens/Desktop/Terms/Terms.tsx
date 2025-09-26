@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 
-const Policy = () => {
+const Terms = () => {
 
-useEffect(()=>{
-    window.scrollTo(0,0)
-},[])
+    useEffect(()=>{
+        window.scrollTo(0,0)
+    },[])
 
     const text = `Effective Date: 9/18/2025
 
@@ -58,9 +58,9 @@ A1c Boost is not intended for children under 13 (or the minimum age in your coun
 We may update this Privacy Policy from time to time. We will notify you of significant changes by updating the "Effective Date" and, if required, by sending a notice in the app or via email.`;
 
     return (
-        <div className="max-w-6xl mx-auto px-4 py-14">
-          <h2 className="max-w-[371px] mx-auto text-center font-bold md:text-5xl text-3xl leading-[62px] bg-gradient-to-r from-[#008ae2] via-[#00b5ca] to-[#f6c643] bg-clip-text text-transparent drop-shadow-md">
-        Privacy Policy
+        <div className="max-w-6xl mx-auto px-4 py-8">
+          <h2 className="max-w-[571px] mx-auto text-center font-bold md:text-5xl text-3xl leading-[62px] bg-gradient-to-r from-[#008ae2] via-[#00b5ca] to-[#f6c643] bg-clip-text text-transparent drop-shadow-md">
+        Terms & Conditions
       </h2>
             <div className="prose prose-lg mt-20 max-w-none">
                 <pre className="whitespace-pre-wrap font-sans text-gray-700 leading-relaxed">
@@ -71,4 +71,4 @@ We may update this Privacy Policy from time to time. We will notify you of signi
     );
 };
 
-export default Policy;
+export default Terms;

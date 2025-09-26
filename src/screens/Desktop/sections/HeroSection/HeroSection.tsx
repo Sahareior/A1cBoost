@@ -103,7 +103,7 @@ export const HeroSection = (): JSX.Element => {
   );
 
   return (
-    <section className="w-full flex flex-col items-center py-[120px] px-8">
+    <section id="features" className="w-full flex flex-col items-center py-[120px] px-8">
       {/* Header */}
       <div className="text-center mb-[80px] max-w-[800px]">
         <h2 className=" bg-[linear-gradient(123deg,rgba(0,138,226,1)_0%,rgba(0,181,202,1)_50%,rgba(246,198,67,1)_100%)] [-webkit-background-clip:text] bg-clip-text [-webkit-text-fill-color:transparent] [text-fill-color:transparent] [font-family:'Poppins',Helvetica] font-bold text-transparent text-5xl tracking-[-0.96px] leading-[62.4px] mb-4">

@@ -38,7 +38,7 @@ const PricingCard = ({ plan }) => {
   const isLifetime = plan.id === "lifetime";
 
   return (
-    <div className="relative py-16 px-10 w-[350px] rounded-[15px] overflow-hidden bg-[#0077c4cc] flex flex-col items-center justify-between p-8">
+    <div id="premium" className="relative py-16 px-10 w-[350px] rounded-[15px] overflow-hidden bg-[#0077c4cc] flex flex-col items-center justify-between p-8">
       {/* Header Section */}
       <div className="text-center mb-6">
         <h3 className="font-semibold text-white text-2xl mb-2">{plan.title}</h3>
@@ -54,7 +54,7 @@ const PricingCard = ({ plan }) => {
           <p className="text-white text-lg mb-2">{plan.limitedText}</p>
           <Progress
             value={plan.progress}
-            className="w-full h-[13px] bg-white rounded-[15px] mb-2"
+            className="w-full h-[19px] bg-white rounded-[15px] mb-2"
           />
           <p className="text-white text-lg">{plan.progressText}</p>
         </div>
@@ -80,9 +80,9 @@ const PricingCard = ({ plan }) => {
 
 export const UniqueSellingPointsSection = (): JSX.Element => {
   return (
-    <section className="relative w-full min-h-[617px] bg-white flex flex-col items-center justify-center">
+    <section id="premium"  className="relative w-full min-h-[617px] bg-white flex flex-col items-center justify-center">
       {/* Pricing Cards Wrapper */}
-      <div className="flex flex-wrap justify-center items-center gap-6">
+      <div className="flex flex-wrap justify-center items-center gap-10">
         {pricingPlans.map((plan) => (
           <PricingCard key={plan.id} plan={plan} />
         ))}

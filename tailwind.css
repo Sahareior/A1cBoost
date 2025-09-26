@@ -7,6 +7,16 @@
   }
 }
 
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(0, 138, 226, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 138, 226, 0.8), 0 0 30px rgba(0, 181, 202, 0.4);
+  }
+}
+
 :root {
   --primary-0: rgba(255, 255, 255, 1);
 }
@@ -43,6 +53,10 @@
   to {
     transform: rotate(1turn);
   }
+}
+
+.bg-primary{
+  background-color: green;
 }
 
 @keyframes image-glow {

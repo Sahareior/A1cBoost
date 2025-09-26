@@ -28,48 +28,50 @@ export const UserTestimonialsSection = (): JSX.Element => {
     If you've ever felt overwhelmed by "do more, try harder," I built A1cBoost for you.
   `;
 
-  const previewText = testimonialText.split(" ").slice(0, 100).join(" ") + "...";
+  const previewText =
+    testimonialText.split(" ").slice(0, 100).join(" ") + "...";
 
   return (
-    <section className="w-full relative">
-      <Card className="flex gap-[75px] bg-[#c0e6ff] rounded-[15px] border-[3px] border-solid border-white shadow-[0px_2px_20px_#00000040] p-12">
-        <CardContent className="flex gap-[75px] p-0 w-full">
+    <section className="w-full relative px-4 sm:px-6 lg:px-12">
+      <Card className="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-[75px] bg-[#c0e6ff] rounded-[15px] border-[3px] border-white shadow-[0px_2px_20px_#00000040] p-6 sm:p-8 lg:p-12">
+        <CardContent className="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-[75px] p-0 w-full">
+          {/* Image */}
           <img
-            className="mt-[83px] w-[308px] h-[383px] ml-11 rounded-[15px] object-cover flex-shrink-0"
+            className="w-full max-w-[280px] sm:max-w-[308px] h-auto rounded-[15px] object-cover flex-shrink-0"
             alt="Rectangle"
             src="/rectangle-53.png"
           />
 
-          <div className="flex mt-[62px] w-[722px] h-[454px] relative flex-col items-start gap-7">
-            <div className="flex flex-col items-start gap-[3px] relative self-stretch w-full flex-[0_0_auto]">
-              <div className="flex flex-col items-start gap-[30px] relative self-stretch w-full flex-[0_0_auto]">
-                <div className="flex flex-col items-start gap-[3px] relative self-stretch w-full flex-[0_0_auto]">
-                  <h2 className="relative self-stretch mt-[-1.00px] [text-shadow:0px_2px_2px_#00000040] [font-family:'Poppins',Helvetica] font-bold text-[#008ae1] text-[32px] tracking-[-0.64px] leading-[41.6px]">
-                    From Our Founder
-                  </h2>
+          {/* Text Section */}
+          <div className="flex flex-col gap-6 w-full">
+            <div className="flex flex-col gap-2">
+              <h2 className="font-poppins font-bold text-[#008ae1] text-2xl sm:text-[32px] tracking-[-0.64px] leading-snug [text-shadow:0px_2px_2px_#00000040]">
+                From Our Founder
+              </h2>
 
-                  <p className="relative self-stretch [font-family:'Segoe_Print-Regular',Helvetica] italic font-normal text-[#008ae1] text-base tracking-[0] leading-[20.8px]">
-                    &#34;Progress beats perfection.&#34;
-                  </p>
-                </div>
-
-                <ScrollArea className="relative w-full h-[244px]">
-                  <div className="w-full [font-family:'Poppins',Helvetica] font-normal text-black text-[22px] tracking-[0] leading-[28.6px]">
-                    {showFullText ? testimonialText : previewText}
-                  </div>
-                </ScrollArea>
-              </div>
-
-              <button
-                onClick={() => setShowFullText(!showFullText)}
-                className="relative self-stretch [font-family:'Poppins',Helvetica] font-semibold text-[#008ae1] text-xl tracking-[0] leading-[26px] bg-transparent border-none cursor-pointer pt-4 mt-4 text-left p-0"
-              >
-                {showFullText ? "See Less" : "See More"}
-              </button>
+              <p className="italic font-normal text-[#008ae1] text-base">
+                &#34;Progress beats perfection.&#34;
+              </p>
             </div>
 
-            <Button className="relative w-[461px] h-[57px] rounded-[10px] shadow-[0px_2px_20px_#00000040] bg-[linear-gradient(315deg,rgba(255,255,255,0.12)_0%,rgba(255,255,255,0)_100%),linear-gradient(149deg,rgba(14,66,105,1)_0%,rgba(0,181,202,1)_50%,rgba(254,203,44,1)_100%)] border-none hover:opacity-90 transition-opacity">
-              <span className="[font-family:'Poppins',Helvetica] font-semibold text-white text-2xl text-center tracking-[-0.48px] leading-[31.2px]">
+            {/* Scrollable Text */}
+            <ScrollArea className="w-full h-[200px] sm:h-[244px]">
+              <div className="font-poppins text-black text-base sm:text-[22px] leading-relaxed">
+                {showFullText ? testimonialText : previewText}
+              </div>
+            </ScrollArea>
+
+            {/* See More / See Less */}
+            <button
+              onClick={() => setShowFullText(!showFullText)}
+              className="font-poppins font-semibold text-[#008ae1] text-lg sm:text-xl text-left bg-transparent border-none cursor-pointer pt-2"
+            >
+              {showFullText ? "See Less" : "See More"}
+            </button>
+
+            {/* Button */}
+            <Button className="w-full sm:w-[461px] h-[50px] sm:h-[57px] rounded-[10px] shadow-[0px_2px_20px_#00000040] bg-[linear-gradient(315deg,rgba(255,255,255,0.12)_0%,rgba(255,255,255,0)_100%),linear-gradient(149deg,rgba(14,66,105,1)_0%,rgba(0,181,202,1)_50%,rgba(254,203,44,1)_100%)] hover:opacity-90 transition-opacity">
+              <span className="font-poppins font-semibold text-white text-lg sm:text-2xl text-center">
                 Get Early Access
               </span>
             </Button>

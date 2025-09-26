@@ -30,32 +30,33 @@ const featuresData = [
 
 export const FeaturesSection = (): JSX.Element => {
   return (
-    <div className="flex items-center justify-center gap-28 w-full px-[120px]">
+    <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-44 w-full px-4 md:px-8 lg:px-[120px]">
+      {/* Mobile Image - Hidden on desktop, shown on mobile */}
       <img
-        className="w-[353px] h-[703px] flex-shrink-0"
-        alt="Element"
+        className="w-[280px] h-[560px] lg:w-[353px] lg:h-[703px] flex-shrink-0 mb-8 lg:mb-0 lg:block"
+        alt="Mobile app preview"
         src="/mobile2.png"
       />
 
-      <div className="flex flex-col w-[687px] items-start gap-[25px]">
+      <div className="flex flex-col w-full lg:w-[687px] items-start gap-6 lg:gap-[25px]">
         {featuresData.map((feature, index) => (
           <Card
             key={index}
-            className="w-full bg-white rounded-[15px] shadow-[0px_2px_2px_#00000040]"
+          className="w-full bg-white hover:scale-[1.01] transform transition-all duration-700 rounded-[15px] shadow-[0px_2px_2px_#00000040]"
           >
-            <CardContent className="flex items-center gap-[50px] px-[76px] py-7 h-[169px]">
+            <CardContent className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 lg:gap-[50px] px-4 sm:px-6 lg:px-[76px] py-6 sm:py-7 min-h-[140px] sm:h-[169px]">
               <img
-                className="w-20 h-20 flex-shrink-0"
-                alt="Frame"
+                className="w-16 h-16 sm:w-20 sm:h-20 flex-shrink-0"
+                alt={feature.title}
                 src={feature.icon}
               />
 
-              <div className="flex flex-col items-start gap-[15px] flex-1">
-                <div className="[font-family:'Poppins',Helvetica] font-semibold text-[#0c517e] text-2xl tracking-[-0.48px] leading-[31.2px]">
+              <div className="flex flex-col items-start gap-3 lg:gap-[15px] flex-1 text-center sm:text-left">
+                <div className="[font-family:'Poppins',Helvetica] font-semibold text-[#0c517e] text-xl sm:text-2xl tracking-[-0.48px] leading-[28px] sm:leading-[31.2px]">
                   {feature.title}
                 </div>
 
-                <div className="[font-family:'Poppins',Helvetica] font-normal text-black text-base tracking-[-0.32px] leading-[20.8px]">
+                <div className="[font-family:'Poppins',Helvetica] font-normal text-black text-sm sm:text-base tracking-[-0.32px] leading-[18px] sm:leading-[20.8px]">
                   {feature.description}
                 </div>
               </div>
