@@ -10,10 +10,11 @@ const sectionData = [
     subtitleColor: "text-[#008ae2]",
     description:
       "With A1cBoost, families and caregivers can securely share real-time insights like blood sugar trends, meals, reminders, and activity — all in one app. Whether you're across the table or across the country, stay informed and support each other through every high and low.",
-    image: "/kid-his-father-doing-sport-home-1.png",
+    image: "/last.png",
     imageAlt: "Kid his father doing",
     imagePosition: "right",
-    imageClasses: "w-full max-w-[400px] md:w-[485px] h-[250px] md:h-[325px] object-cover",
+    imageClasses:
+      "w-full max-w-[400px] md:w-[485px] h-[250px] md:h-[325px] rounded-[15px] border-2 border-solid border-[#ffffff99] object-cover", // Added border styles
   },
   {
     id: "adults",
@@ -69,9 +70,7 @@ export const CallToActionSection = (): JSX.Element => {
 
                   {/* Content */}
                   <div
-                    className={`flex flex-col items-start gap-3 md:gap-[9px] w-full lg:${
-                      section.id === "families" ? "w-[690px]" : "w-[666px]"
-                    } text-center lg:text-left`}
+                    className={`flex flex-col items-start gap-3 md:gap-[9px] w-full lg:w-[666px] text-center lg:text-left`} // Made width consistent
                   >
                     <h2 className="[font-family:'Poppins',Helvetica] font-normal text-[#333333] text-2xl md:text-3xl lg:text-[32px] tracking-[0] leading-[1.2]">
                       {section.title}
@@ -84,9 +83,7 @@ export const CallToActionSection = (): JSX.Element => {
                     </h3>
 
                     <p
-                      className={`[font-family:'Poppins',Helvetica] font-normal text-black text-base md:text-lg lg:text-xl tracking-[0] leading-[1.5] md:leading-[1.6] w-full ${
-                        section.id === "adults" ? "lg:w-[642px]" : ""
-                      }`}
+                      className={`[font-family:'Poppins',Helvetica] font-normal text-black text-base md:text-lg lg:text-xl tracking-[0] leading-[1.5] md:leading-[1.6] w-full`} // Removed conditional width
                     >
                       {section.description}
                     </p>
