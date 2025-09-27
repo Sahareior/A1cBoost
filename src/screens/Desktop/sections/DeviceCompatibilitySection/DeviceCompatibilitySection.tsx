@@ -10,6 +10,8 @@ export const DeviceCompatibilitySection = (): JSX.Element => {
     { label: "Reviews", path: "/" },
   ];
 
+  // asdadx
+  
   const legalItems = [
     { label: "Terms of Service", path: "terms" },
     { label: "Privacy Policy", path: "policy" },
