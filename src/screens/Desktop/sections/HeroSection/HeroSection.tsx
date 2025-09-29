@@ -4,16 +4,16 @@ import { Card, CardContent } from "../../../../components/ui/card";
 export const HeroSection = (): JSX.Element => {
   const featureCards = [
     {
-      title: "A1cBoost Scoring System",
+      title: "See Your Progress at a Glance",
       description:
-        "Gamified system that helps you track and understand A1c-related metrics over time. Reinforces healthy habits through visible progress.",
+        "Our gamified scoring system helps you track and understand A1c-related metrics over time, reinforcing healthy habits through visible progress.",
       iconSrc: "/frame-2147227120.svg",
       iconBg: null,
     },
     {
-      title: "Booster Coach",
+      title: "Get Real-Time Support & Motivation",
       description:
-        "Your AI-powered, personalized metabolic companion — offering nudges, affirmations, and real-time suggestions.",
+        "Your AI-powered, personalized metabolic companion offers nudges, affirmations, and real-time suggestions.",
       iconSrc: null,
       iconBg: "bg-[#2ab29c]",
       additionalIcons: [
@@ -28,28 +28,28 @@ export const HeroSection = (): JSX.Element => {
       ],
     },
     {
-      title: "Health Journey Hub",
+      title: "Learn What Works for You",
       description:
-        "A personalized resource library tailored to your own metabolic responses and needs.",
+        "Access a personalized resource library tailored to your own metabolic responses and needs.",
       iconSrc: "/ix-health.svg",
       iconBg: "bg-[#34a853]",
     },
     {
-      title: "Quick Meal Snap",
+      title: "Know Your Meal Instantly",
       description:
-        "Take a photo of your meal and get an estimated carb and calorie breakdown in seconds.",
+        "Snap a photo of your food to get an estimated carb and calorie breakdown in seconds.",
       iconSrc: "/simple-icons-quicktime.svg",
       iconBg: "bg-[#ea433580]",
     },
     {
-      title: "Clinical-Grade Data Exports",
+      title: "Easily Share with Your Care Team",
       description:
-        "Easily share your progress with healthcare professionals using secure export tools.",
+        "Export secure reports to share your progress with healthcare professionals.",
       iconSrc: "/typcn-export.svg",
       iconBg: "bg-[#008ae180]",
     },
     {
-      title: "Medical App Integrations",
+      title: "All Your Data in One Place",
       description:
         "Connect your CGM and other trackers for seamless insights and pattern recognition.",
       iconSrc: "/pressure-gauge-11805184-1.svg",

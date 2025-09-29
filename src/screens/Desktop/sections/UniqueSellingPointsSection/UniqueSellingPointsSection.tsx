@@ -21,7 +21,7 @@ const pricingPlans = [
     ],
     buttonText: "Select Lifetime",
     progress: 38.7,
-    progressText: "387 of 1000 claimed",
+    progressText: " 1000 Joined",
     limitedText: "Limited to first 1000 supporters",
   },
   {
@@ -38,7 +38,7 @@ const PricingCard = ({ plan }) => {
   const isLifetime = plan.id === "lifetime";
 
   return (
-    <div id="premium" className="relative py-16 px-10 w-[350px] rounded-[15px] overflow-hidden bg-[#0077c4cc] flex flex-col items-center justify-between p-8">
+    <div id="premium" className="relative py-16 px-4 w-[380px] rounded-[15px] overflow-hidden bg-[#0077c4cc] flex flex-col items-center justify-between p-8">
       {/* Header Section */}
       <div className="text-center mb-6">
         <h3 className="font-semibold text-white text-2xl mb-2">{plan.title}</h3>
@@ -52,11 +52,18 @@ const PricingCard = ({ plan }) => {
       {isLifetime && (
         <div className="text-center mb-6 w-full">
           <p className="text-white text-lg mb-2">{plan.limitedText}</p>
+          <button className="bg-[#FECB2CA6] text-white px-3 rounded-xl my-5">Only 234 spots left!</button>
           <Progress
             value={plan.progress}
             className="w-full h-[19px] bg-white rounded-[15px] mb-2"
           />
-          <p className="text-white text-lg">{plan.progressText}</p>
+          <div className="flex text-white justify-between px-2">
+            <p>0</p>
+            <p className=" text-lg">{plan.progressText}</p>
+            <p>1000</p>
+          </div>
+
+          <button className="bg-[#ED4747C7] text-white rounded-xl px-3 py-1 mt-4 -mb-3">Join now before we're at capacity!</button>
         </div>
       )}
 

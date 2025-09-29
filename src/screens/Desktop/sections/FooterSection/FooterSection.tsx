@@ -9,8 +9,7 @@ export const FooterSection = (): JSX.Element => {
         {/* Heading */}
         <h2 className="w-full text-center bg-[linear-gradient(123deg,rgba(0,138,226,1)_0%,rgba(0,181,202,1)_50%,rgba(246,198,67,1)_100%)] [-webkit-background-clip:text] bg-clip-text text-transparent font-poppins font-bold 
           text-3xl sm:text-4xl lg:text-5xl leading-snug sm:leading-[46px] lg:leading-[62px] tracking-tight">
-          Take Control Today
-        </h2>
+          Join A1cBoost Insider — Get Your Free Starter Plan        </h2>
 
         {/* Email + Button */}
         <div className="relative w-full max-w-[924px]">
@@ -46,6 +45,7 @@ export const FooterSection = (): JSX.Element => {
         alt="Frame"
         src="/frame-2147227110.svg"
       />
+      <p className="text-[40px] font-semibold">Cancel anytime · No CGM required · Private by design</p>
     </section>
   );
 };

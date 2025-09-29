@@ -21,23 +21,23 @@ export const DeviceCompatibilitySection = (): JSX.Element => {
 
   return (
     <footer
-      className="w-full rounded-t-2xl overflow-hidden py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8"
+      className="w-full rounded-t-2xl overflow-hidden py-12 sm:py-16 lg:py-10 px-4 sm:px-6 lg:px-8"
       style={{
         background:
           "linear-gradient(93.38deg, #007ECE 0%, #00B5CA 50%, #FECB2C 100%)",
       }}
     >
       {/* Main Content Container */}
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-center lg:items-start gap-10 lg:gap-12 xl:gap-16">
+      <div className="max-w-[83rem] mx-auto flex flex-col lg:flex-row justify-between items-center lg:items-start gap-10 lg:gap-12 xl:gap-16">
         
         {/* Left Side - Logo + Text */}
-        <div className="flex flex-col items-center lg:items-start text-center lg:text-left space-y-4 sm:space-y-5">
+        <div className="flex flex-col items-center -mt-7 lg:items-start text-center lg:text-left ">
           <img
             src="/logo.png"
             alt="A1cBoost Logo"
             className="w-28 h-28 sm:w-36 sm:h-36 lg:w-44 lg:h-44 xl:w-52 xl:h-52"
           />
-          <p className="text-black text-lg sm:text-xl lg:text-2xl font-semibold leading-tight tracking-tight">
+          <p className="text-black -mt-4 text-lg sm:text-xl text-center lg:text-2xl font-semibold leading-tight tracking-tight">
             Smarter Habits.
             <br />Healthier Numbers.
           </p>

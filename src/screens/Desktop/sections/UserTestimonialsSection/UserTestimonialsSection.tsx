@@ -7,25 +7,11 @@ export const UserTestimonialsSection = (): JSX.Element => {
   const [showFullText, setShowFullText] = useState(false);
 
   const testimonialText = `
-    I was healthy my whole life — until I wasn't. In March 2007, at 21, I walked into a doctor's office exhausted and 40 pounds lighter. When they checked my blood sugar, the meter simply read "HIGH." One shot of insulin later, I had a diagnosis: Type 1 diabetes and an A1c of 18. The doctor called it "off the charts," and that moment has stuck with me ever since. Walking out with nothing but insulin and syringes, one thought kept looping in my head: What am I supposed to do now?
-
-    Everyday tasks had become so difficult I sometimes had to pull myself up the stairs using the railing, and I'd already undergone cataract surgery — my eye doctor said I was the youngest patient he'd ever performed it on. Finally I knew the cause. But aside from a prescription for insulin and syringes, I had no roadmap, no guidance, and no idea how to manage the disease on my own.
-
-    I'm not a quitter. I learned through trial and error: multiple daily injections, countless finger pricks, and eventually an insulin pump that gave me some peace of mind. Nearly 20 years later I've experienced the highs, lows, and burnout that come with chronic disease. Diabetes doesn't pause for the rest of life.
-
-    I built A1cBoost because I wanted something I couldn't find: a supportive, tech-driven way to bring my health world together and make small wins visible.
-
-    Track & Understand: A gamified scoring system to follow A1c-related trends and reinforce healthy habits.
-    Get Coaching: An AI-powered Booster Coach offering real-time nudges and encouragement.
-    Learn & Grow: A Health Journey Hub with personalized resources tailored to your path.
-    Make It Easy: Quick Meal Snap to estimate carbs and calories from a photo.
-    Stay Connected: Secure data exports to share with your healthcare team and seamless integrations with CGMs, fitness trackers, insulin pens and other devices — all in one dashboard.
-    
-    Because no one's metabolic journey is the same — just like a fingerprint.
-
-    Progress beats perfection. Tiny actions compound into meaningful change.
-
-    If you've ever felt overwhelmed by "do more, try harder," I built A1cBoost for you.
+I was healthy my whole life — until I wasn’t. In March 2007, at 21, I walked into a doctor’s office exhausted and 40 pounds lighter. When they checked my blood sugar, the meter simply read “HIGH.” One shot of insulin later, I had a diagnosis: Type 1 diabetes and an A1c of 18. The doctor called it “off the charts,” and that moment has stuck with me ever since. Walking out with nothing but insulin and syringes, one thought kept looping in my head: What am I supposed to do now?
+I was healthy my whole life — until I wasn’t. In March 2007, at 21, I walked into a doctor’s office exhausted and 40 pounds lighter. When they checked my blood sugar, the meter simply read “HIGH.” One shot of insulin later, I had a diagnosis: Type 1 diabetes and an A1c of 18. The doctor called it “off the charts,” and that moment has stuck with me ever since. Walking out with nothing but insulin and syringes, one thought kept looping in my head: What am I supposed to do now?
+I was healthy my whole life — until I wasn’t. In March 2007, at 21, I walked into a doctor’s office exhausted and 40 pounds lighter. When they checked my blood sugar, the meter simply read “HIGH.” One shot of insulin later, I had a diagnosis: Type 1 diabetes and an A1c of 18. The doctor called it “off the charts,” and that moment has stuck with me ever since. Walking out with nothing but insulin and syringes, one thought kept looping in my head: What am I supposed to do now?
+I was healthy my whole life — until I wasn’t. In March 2007, at 21, I walked into a doctor’s office exhausted and 40 pounds lighter. When they checked my blood sugar, the meter simply read “HIGH.” One shot of insulin later, I had a diagnosis: Type 1 diabetes and an A1c of 18. The doctor called it “off the charts,” and that moment has stuck with me ever since. Walking out with nothing but insulin and syringes, one thought kept looping in my head: What am I supposed to do now?
+I was healthy my whole life — until I wasn’t. In March 2007, at 21, I walked into a doctor’s office exhausted and 40 pounds lighter. When they checked my blood sugar, the meter simply read “HIGH.” One shot of insulin later, I had a diagnosis: Type 1 diabetes and an A1c of 18. The doctor called it “off the charts,” and that moment has stuck with me ever since. Walking out with nothing but insulin and syringes, one thought kept looping in my head: What am I supposed to do now?
   `;
 
   const previewText =
@@ -39,7 +25,7 @@ export const UserTestimonialsSection = (): JSX.Element => {
           <img
             className="w-full max-w-[280px] sm:max-w-[308px] h-auto rounded-[15px] object-cover flex-shrink-0"
             alt="Rectangle"
-            src="/rectangle-53.png"
+            src="/aboutMe.jpg"
           />
 
           {/* Text Section */}
@@ -56,7 +42,7 @@ export const UserTestimonialsSection = (): JSX.Element => {
 
             {/* Scrollable Text */}
             <ScrollArea className="w-full h-[200px] sm:h-[244px]">
-              <div className="font-poppins text-black text-base sm:text-[22px] leading-relaxed">
+              <div className="font-poppins text-black text-base sm:text-[22px] pr-5 leading-relaxed">
                 {showFullText ? testimonialText : previewText}
               </div>
             </ScrollArea>
