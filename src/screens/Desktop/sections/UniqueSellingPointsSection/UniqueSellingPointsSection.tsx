@@ -7,7 +7,7 @@ const pricingPlans = [
     id: "monthly",
     title: "Pro - Monthly",
     price: "$10.99",
-    features: ["Get Full Integrations", " Advanced Reports","Ad-Free"],
+    features: ["Get Full Integrations, Advanced Reports,Ad-Free "],
     buttonText: "Select Monthly",
   },
   {
@@ -52,23 +52,23 @@ const PricingCard = ({ plan }) => {
       {isLifetime && (
         <div className="text-center mb-6 w-full">
           <p className="text-white text-lg mb-2">{plan.limitedText}</p>
-          <button className="bg-[#FECB2CA6] text-white px-3 rounded-xl my-5">Only 234 spots left!</button>
+          <button className="bg-[#2472B1] p-1 text-white px-3 rounded-xl my-5">Only 234 spots left!</button>
           <Progress
             value={plan.progress}
-            className="w-full h-[19px] bg-white rounded-[15px] mb-2"
+            className=" h-[19px] w-[86%] mx-auto bg-white rounded-[15px] mb-2"
           />
-          <div className="flex text-white justify-between px-2">
+          <div className="flex w-[86%] mx-auto text-white justify-between px-2">
             <p>0</p>
             <p className=" text-lg">{plan.progressText}</p>
             <p>1000</p>
           </div>
 
-          <button className="bg-[#ED4747C7] text-white rounded-xl px-3 py-1 mt-4 -mb-3">Join now before we're at capacity!</button>
+          <button className="bg-[#ED4747C7] mt-1 text-white rounded-xl px-3 py-1 mt-4 -mb-3">Join now before we're at capacity!</button>
         </div>
       )}
 
       {/* Features List */}
-      <div className="w-full mb-6">
+      <div className="w-[60%] mb-6">
         {plan.features.map((feature, index) => (
           <div key={index} className="flex items-start gap-3 mb-4 last:mb-0">
             <div className="w-5 h-5 bg-[#0cbf02] rounded-full mt-1" />

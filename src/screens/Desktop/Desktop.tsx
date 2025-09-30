@@ -21,10 +21,10 @@ const navigationItems = [
 ];
 
 const diabetesTypes = [
-  { label: "Type 1" },
-  { label: "Type 2" },
-  { label: "GLP-1" },
-  { label: "Wellness" },
+  { label: "Type 1: Build My Type 1 Plan — Start Free" },
+  { label: "Type 2: Track & Improve My A1c — Start Free" },
+  { label: "GLP-1: Make My GLP-1 Work Smarter — Start Free" },
+  { label: "Wellness: Boost My Metabolic Health — Start Free" },
 ];
 
 export const Desktop = (): JSX.Element => {
@@ -160,18 +160,22 @@ export const Desktop = (): JSX.Element => {
                 <MainContentSection />
 
                 <div className="flex flex-wrap items-center gap-3 mt-8 md:mt-10">
-                  {diabetesTypes.map((type, index) => (
-                    <Button
-                      onClick={() => setDiabetis(type.label)}
-                      key={index}
-                      variant="secondary"
-                      className="relative overflow-hidden min-w-[120px] md:min-w-[141px] px-4 md:px-6 py-2 md:py-3 rounded-[30px] text-white [font-family:'Poppins',Helvetica] font-semibold text-sm md:text-base tracking-[-0.32px] leading-[18px] md:leading-[20.8px] transition-all duration-700 group"
-                    >
-                      <span className="absolute inset-0 bg-[linear-gradient(93.9deg,#008AE2_3.04%,#00B5CA_51.32%,#FECB2C_99.9%)]"></span>
-                      <span className="absolute inset-0 bg-[#0c517e] transition-opacity duration-700 group-hover:opacity-0"></span>
-                      <span className="relative z-10">{type.label}</span>
-                    </Button>
-                  ))}
+{diabetesTypes.map((type, index) => {
+  const displayText = type.label.split(":")[0]; // get text before :
+  return (
+    <Button
+      onClick={() => setDiabetis(type.label)}
+      key={index}
+      variant="secondary"
+      className="relative overflow-hidden min-w-[120px] md:min-w-[141px] px-4 md:px-6 py-2 md:py-3 rounded-[30px] text-white [font-family:'Poppins',Helvetica] font-semibold text-sm md:text-base tracking-[-0.32px] leading-[18px] md:leading-[20.8px] transition-all duration-700 group"
+    >
+      <span className="absolute inset-0 bg-[linear-gradient(93.9deg,#008AE2_3.04%,#00B5CA_51.32%,#FECB2C_99.9%)]"></span>
+      <span className="absolute inset-0 bg-[#0c517e] transition-opacity duration-700 group-hover:opacity-0"></span>
+      <span className="relative z-10">{displayText}</span>
+    </Button>
+  );
+})}
+
 
                   <button
                     className="w-full md:w-[calc(100%-60px)] h-[60px] md:h-[85px] text-[24px] mt-4 md:mt-6"
@@ -187,7 +191,7 @@ export const Desktop = (): JSX.Element => {
                       cursor: "pointer",
                     }}
                   >
-                    Start Free - {diabetis}
+                    {diabetis}
                   </button>
 
                   <p className="font-bold text-center">

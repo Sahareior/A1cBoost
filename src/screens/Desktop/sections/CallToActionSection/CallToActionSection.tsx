@@ -46,7 +46,7 @@ const sectionData = [
 
 export const CallToActionSection = (): JSX.Element => {
   return (
-    <section id="how-it-works" className="w-full bg-[#00947c1c] shadow-[0px_2px_20px_#00000040] py-16 md:py-[150px]">
+    <section id="how-it-works" className="w-full bg-[#00947c1c] mt-10 shadow-[0px_2px_20px_#00000040] py-16 md:py-[150px]">
       <div className="max-w-[1201px] mx-auto px-4 md:px-6 lg:px-4">
         {sectionData.map((section, index) => (
           <div key={section.id} className="mb-12 md:mb-[63px] last:mb-0">

@@ -32,7 +32,7 @@ export const FooterSection = (): JSX.Element => {
 
               {/* Text */}
               <span className="relative font-poppins font-semibold text-white text-sm sm:text-lg md:text-xl whitespace-nowrap z-10">
-                Get Early Access
+                Send Me My Plan
               </span>
             </Button>
           </div>
@@ -45,7 +45,7 @@ export const FooterSection = (): JSX.Element => {
         alt="Frame"
         src="/frame-2147227110.svg"
       />
-      <p className="text-[40px] font-semibold">Cancel anytime · No CGM required · Private by design</p>
+      <p className="text-[20px] font-semibold">Cancel anytime · No CGM required · Private by design</p>
     </section>
   );
 };

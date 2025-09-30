@@ -46,7 +46,7 @@ export const DeviceCompatibilitySection = (): JSX.Element => {
         {/* Middle - Get the Apps */}
         <div className="flex flex-col items-center space-y-6 sm:space-y-7 lg:space-y-8 max-w-md">
           <Button className="px-8 sm:px-12 lg:px-14 py-4 sm:py-5 lg:py-6 rounded-full shadow-lg text-white text-lg sm:text-xl lg:text-2xl font-semibold bg-[linear-gradient(130deg,rgba(0,138,226,1)_0%,rgba(0,181,202,1)_50%,rgba(254,203,44,1)_100%)] hover:opacity-90 transition-opacity duration-200">
-            Get the Apps
+                Start Free — Get My Plan
           </Button>
           
           <div className="flex justify-center gap-5 sm:gap-6">
