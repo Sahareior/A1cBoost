@@ -21,15 +21,15 @@ const navigationItems = [
 ];
 
 const diabetesTypes = [
-  { label: "Type 1: Build My Type 1 Plan — Start Free" },
-  { label: "Type 2: Track & Improve My A1c — Start Free" },
-  { label: "GLP-1: Make My GLP-1 Work Smarter — Start Free" },
-  { label: "Wellness: Boost My Metabolic Health — Start Free" },
+  { label: " Build My Type 1 Plan — Start Free", type: 'Type 1' },
+  { label: " Track & Improve My A1c — Start Free", type: 'Type 2' },
+  { label: " Make My GLP-1 Work Smarter — Start Free", type: "GLP-1" },
+  { label: " Boost My Metabolic Health — Start Free", type:'Wellness' },
 ];
 
 export const Desktop = (): JSX.Element => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [diabetis, setDiabetis] = useState("Get My Plan");
+  const [diabetis, setDiabetis] = useState("Build My Type 1 Plan");
 
   return (
     <div className="bg-[#fbfcfd] w-full relative overflow-x-hidden">
@@ -161,7 +161,9 @@ export const Desktop = (): JSX.Element => {
 
                 <div className="flex flex-wrap items-center gap-3 mt-8 md:mt-10">
 {diabetesTypes.map((type, index) => {
-  const displayText = type.label.split(":")[0]; // get text before :
+
+  // console.log(type.label.split(":")[0], 'this is log')
+
   return (
     <Button
       onClick={() => setDiabetis(type.label)}
@@ -171,7 +173,7 @@ export const Desktop = (): JSX.Element => {
     >
       <span className="absolute inset-0 bg-[linear-gradient(93.9deg,#008AE2_3.04%,#00B5CA_51.32%,#FECB2C_99.9%)]"></span>
       <span className="absolute inset-0 bg-[#0c517e] transition-opacity duration-700 group-hover:opacity-0"></span>
-      <span className="relative z-10">{displayText}</span>
+      <span className="relative z-10">{type.type}</span>
     </Button>
   );
 })}
@@ -258,16 +260,16 @@ export const Desktop = (): JSX.Element => {
           <FeaturesSection />
         </section>
 
-        <section className="py-8 md:py-16">
+        <section className="py-8 md:py-14">
           <HeroSection />
         </section>
 
-        <div className="flex flex-col mb-20 justify-center items-center">
-          <h2 className=" text-center bg-[linear-gradient(123deg,rgba(0,138,226,1)_0%,rgba(0,181,202,1)_50%,rgba(246,198,67,1)_100%)] [-webkit-background-clip:text] bg-clip-text [-webkit-text-fill-color:transparent] [text-fill-color:transparent] [font-family:'Poppins',Helvetica] font-bold text-transparent text-5xl tracking-[-0.96px] leading-[62.4px] mb-4">
+        <div className="flex flex-col mb-16 justify-center items-center">
+          <h2 className=" text-center bg-[linear-gradient(123deg,rgba(0,138,226,1)_0%,rgba(0,181,202,1)_50%,rgba(246,198,67,1)_100%)] text-3xl [-webkit-background-clip:text] bg-clip-text [-webkit-text-fill-color:transparent] [text-fill-color:transparent] [font-family:'Poppins',Helvetica] font-bold text-transparent md:text-5xl tracking-[-0.96px] md:leading-[62.4px] mb-4">
             Ready to experience these features for yourself?
           </h2>
           <button
-            className="px-6 py-1 w-[633px] h-[85px]  text-white font-semibold rounded-[10px]"
+            className="px-6 py-1 md:w-[633px] h-[85px]  text-white font-semibold rounded-[10px]"
             style={{
               background:
                 "linear-gradient(272deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(92deg, #0E4269 -15.55%, #00B5CA 42.24%, #FECB2C 100.03%)",

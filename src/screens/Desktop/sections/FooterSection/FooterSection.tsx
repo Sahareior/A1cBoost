@@ -45,7 +45,7 @@ export const FooterSection = (): JSX.Element => {
         alt="Frame"
         src="/frame-2147227110.svg"
       />
-      <p className="text-[20px] font-semibold">Cancel anytime · No CGM required · Private by design</p>
+      <p className="md:text-[24px] text-[16px] text-[#3C3C3C] text-center font-semibold">Cancel anytime · No CGM required · Private by design</p>
     </section>
   );
 };

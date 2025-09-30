@@ -63,7 +63,7 @@ const PricingCard = ({ plan }) => {
             <p>1000</p>
           </div>
 
-          <button className="bg-[#ED4747C7] mt-1 text-white rounded-xl px-3 py-1 mt-4 -mb-3">Join now before we're at capacity!</button>
+          <button className="bg-[#ED4747] mt-1 text-white rounded-xl px-3 py-1 mt-4 -mb-3">Join now before we're at capacity!</button>
         </div>
       )}
 
@@ -78,7 +78,7 @@ const PricingCard = ({ plan }) => {
       </div>
 
       {/* Button */}
-      <Button className="w-full h-[51px] rounded-[10px] bg-gradient-to-r from-blue-500 via-cyan-400 to-yellow-400 text-white font-semibold border-none hover:opacity-90 transition">
+      <Button className="w-[80%] h-[51px] rounded-[10px] bg-gradient-to-r from-blue-500 via-cyan-400 to-yellow-400 text-white font-semibold border-none hover:opacity-90 transition">
         {plan.buttonText}
       </Button>
     </div>
