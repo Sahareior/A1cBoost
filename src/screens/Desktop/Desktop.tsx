@@ -180,7 +180,7 @@ export const Desktop = (): JSX.Element => {
 
 
                   <button
-                    className="w-full md:w-[calc(100%-60px)] h-[60px] md:h-[85px] text-[24px] mt-4 md:mt-6"
+                    className="w-full md:w-[calc(100%-60px)] h-[60px] md:h-[85px] md:text-[24px] text-[16px] mt-4 md:mt-6"
                     style={{
                       background: `linear-gradient(92.5deg, #0E4269 -15.55%, #00B5CA 42.24%, #FECB2C 100.03%),
                                linear-gradient(271.52deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0) 100%)`,
