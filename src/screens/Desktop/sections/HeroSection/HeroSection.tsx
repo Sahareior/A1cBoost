@@ -106,8 +106,8 @@ export const HeroSection = (): JSX.Element => {
     <section id="features" className="w-full flex flex-col items-center py-[120px] px-8">
       {/* Header */}
       <div className="text-center mb-[80px] max-w-[800px]">
-        <h2 className=" bg-[linear-gradient(123deg,rgba(0,138,226,1)_0%,rgba(0,181,202,1)_50%,rgba(246,198,67,1)_100%)] [-webkit-background-clip:text] bg-clip-text [-webkit-text-fill-color:transparent] [text-fill-color:transparent] [font-family:'Poppins',Helvetica] font-bold text-transparent text-5xl tracking-[-0.96px] leading-[62.4px] mb-4">
-          What Makes A1cBoost Unique
+        <h2 className=" bg-[linear-gradient(123deg,rgba(0,138,226,1)_0%,rgba(0,181,202,1)_50%,rgba(246,198,67,1)_100%)] [-webkit-background-clip:text] bg-clip-text [-webkit-text-fill-color:transparent] [text-fill-color:transparent] [font-family:'Poppins',Helvetica] font-bold text-transparent md:text-5xl text-3xl md:tracking-[-0.96px] md:leading-[62.4px] mb-4">
+          How is A1cBoost Different?
         </h2>
         <p className="[font-family:'Poppins',Helvetica] font-normal text-[#0e4269] text-lg tracking-[-0.36px] leading-[23.4px]">
           Discover the features that set A1cBoost apart in diabetes management

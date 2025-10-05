@@ -25,7 +25,7 @@ const featuresData = [
     },
   {
     icon: "/frame-2147227093.svg",
-    title: "Granular Reminders",
+    title: "Custom Reminders ",
     description:
       "Never Miss a Step. Set custom reminders for testing, meds, meals, or activity—all in one card.",
      buttonText: ' Set My Reminders →'

@@ -3,11 +3,6 @@ import React from "react";
 export const MainContentSection = (): JSX.Element => {
   return (
     <div className="flex flex-col items-start gap-[5px]">
-      <h1 className="relative self-stretch [font-family:'Poppins',Helvetica] font-semibold text-[#0c517e] text-6xl tracking-[-1.20px] leading-[78px]">
-        Smarter Habits.
-
-      </h1>
-
 <h2
   className="font-bold text-6xl leading-[78px] tracking-[-1.2px] bg-clip-text text-transparent [font-family:'Poppins',Helvetica] "
   style={{
@@ -17,7 +12,7 @@ export const MainContentSection = (): JSX.Element => {
   }}
 >
   
-  Healthier Numbers.
+Take Back Control Today
 </h2>
 
 
